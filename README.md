@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+# Fire! Fire! Fire!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![bill hader](https://media1.giphy.com/media/3orieLZelMyxenarwQ/giphy.gif)
 
-## Available Scripts
+The realestate market is hot, but we need to make sure it doesn't burn down to the ground. How can we best do that? Let's compile a list of all the firehouses in NYC to make sure that we can keep an eye on things. Oh, and let's build it in react because everyone knows that Mark Zuckerberg is in cahoots with the FDNY.
 
-In the project directory, you can run:
+## Step 1
 
-### `npm start`
+Use our old friend `create-react-app` to create a react app. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Step 2
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Let's create two components, `House.js` and `HouseList.js`. Be sure to manage your state in App.js.  
 
-### `npm test`
+In `App.js`, Create 2 properties in state, `fireData` and `currentHouse`. Import all of the firehouses and save them in state as `fireData`. We can find all of the firehouse data in the provided json file `firehouse.json`. Leave `currentHouse` as `null` for now. Let's also create a function that selects one firehouse and updates the state `currentHouse`.  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Step 3
 
-### `npm run build`
+`House.js` should be a component that is meant to display the full details of one fire house. In `House.js`, pass the current house as props down and render it to the component IF there is a `currentHouse`. Else, render the words "Select A House"
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Step 4
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+In `HouseList.js` pass the props of all the firehouses and map over them to render a list of every house. Only display the "FacilityName" property.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Add an onClick function to each of the mapped elements so that the state of current house is updated to the firehouse that is clicked. 
 
-### `npm run eject`
+## Step 5
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Style it. Make the FDNY glimmer like FIRE!!!!  
+![fire](https://media2.giphy.com/media/yr7n0u3qzO9nG/giphy.gif)
