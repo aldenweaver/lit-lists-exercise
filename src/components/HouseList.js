@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 
 import { Box, Card, CardContent, List, ListItemButton, ListItemText, Typography } from "@mui/material";
-// import House from "./House";
+
+import { scrollBoxStyle} from '../styles/displayStyles';
 
 function HouseList({ allHouses, setCurrentHouse }) {
     const[selectedIndex, setSelectedIndex] = useState(0);
@@ -20,7 +21,7 @@ function HouseList({ allHouses, setCurrentHouse }) {
 
             <Card> 
                 <CardContent>
-                    <Box sx={{width: "100%", height: "", maxWidth: 360, bgColor: "background.paper", overflow: "scroll"}}>
+                    <Box sx={scrollBoxStyle}>
                         <List component="nav" aria-label="main mailbox folder" >
                             {allHouses.map((house, index) => { return (
                                 <ListItemButton 

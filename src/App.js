@@ -9,6 +9,8 @@ import HouseList from './components/HouseList';
 // Import static data from file
 import data from './data/facilitiesData';
 
+import { containerStyle, projectStyle } from './styles/displayStyles';
+
 function App() {
   {/* Manage state in App */}
   const [facilitiesData, setFacilitiesData] = useState(data);
@@ -17,13 +19,13 @@ function App() {
   const [currentHouse, setCurrentHouse] = useState(null);
 
   return (
-    <Container className="App">
+    <Container className="App" sx={containerStyle}>
       <Typography variant="h4">
         Lit Lists - List Exercises
       </Typography>
       <br/>
 
-      <Card>
+      <Card sx={projectStyle}>
         <CardHeader title="Fire Fighting Facilties (Static Data)"/>
         <CardContent>
           <Grid container spacing={2}>
